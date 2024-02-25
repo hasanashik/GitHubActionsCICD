@@ -1,0 +1,21 @@
+name: Learn GitHub Actions
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  install-makefile:
+    runs-on: ubuntu-latest
+    name: ${{ github.actor }} is learning GitHub Actions
+    
+    steps:
+      - name: Update package lists
+        run: sudo apt-get update
+        
+      - name: Install make utility
+        run: sudo apt-get install make
+        
+      - name: Check make version
+        run: make --version
