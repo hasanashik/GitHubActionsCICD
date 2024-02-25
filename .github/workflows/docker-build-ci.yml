@@ -11,6 +11,8 @@ jobs:
     name: ${{ github.actor }} is learning tf CI GitHub Actions
 
     steps:
+      - uses: actions/checkout@v4
+
       - name: Update package lists
         run: sudo apt-get update
 
