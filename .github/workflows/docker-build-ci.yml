@@ -1,26 +1,24 @@
 name: Learn docker CI
 
+run-name: ${{ github.actor }} is learning GitHub Actions
+
 on:
   push:
     branches:
       - main
 
 jobs:
-  install-make:
+  install-makefile:
     runs-on: ubuntu-latest
-    name: ${{ github.actor }} is learning tf CI GitHub Actions
 
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Update package lists
-        run: sudo apt-get update
-
-      - name: Install make utility
-        run: sudo apt-get install make
-
-      - name: Check make version
-        run: make --version
+      - name: Install make
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install make 
+          make --version
 
       - name: make docker
+        shell: bash
         run: make docker_build
