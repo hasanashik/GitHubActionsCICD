@@ -20,6 +20,6 @@ jobs:
           sudo apt-get install make 
           make --version
 
-      - name: make docker
+      - name: Make Docker
         shell: bash
         run: make docker_build
