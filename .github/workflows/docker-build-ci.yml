@@ -13,13 +13,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Install make
-        shell: bash
+      - shell: bash
         run: |
           sudo apt-get update
           sudo apt-get install make 
           make --version
 
-      - name: Make Docker
-        shell: bash
-        run: make docker_build
+      - shell: bash
+        run: |
+          make docker_build
