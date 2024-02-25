@@ -1,6 +1,6 @@
 name: Learn docker CI
 
-run-name: ${{ github.actor }} is learning GitHub Actions
+run-name: ${{ github.actor }} is learning Docker CI
 
 on:
   push:
