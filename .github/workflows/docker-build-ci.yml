@@ -18,4 +18,6 @@ jobs:
           sudo apt-get install make
       - shell: bash
         run: |
-          docker build -t nginx:2.0 .
+          docker pull nginx:latest
+          docker images
+          docker build -t custom-nginx .
