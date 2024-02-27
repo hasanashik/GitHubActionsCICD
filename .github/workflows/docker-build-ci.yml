@@ -19,5 +19,6 @@ jobs:
       - shell: bash
         run: |
           docker pull nginx:latest
-          docker images
+          pwd
+          ls -al
           docker build -t custom-nginx .
