@@ -18,5 +18,4 @@ jobs:
           sudo apt-get install make
       - shell: bash
         run: |
-          run: test -f docker_build || { echo "Makefile not found"; exit 1; }
-          make docker_build
+          docker build -t nginx:2.0 .
