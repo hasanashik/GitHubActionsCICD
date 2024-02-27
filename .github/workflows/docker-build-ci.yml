@@ -21,3 +21,4 @@ jobs:
           cd .github/workflows
           pwd
           ls -al
+          make docker_build
