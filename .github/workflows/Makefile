@@ -7,5 +7,5 @@ docker_build:
 docker_push:
     @docker push ${IMG_NAME}:${IMG_TAG}
 
-docker_login:
-    @docker login
+
+
