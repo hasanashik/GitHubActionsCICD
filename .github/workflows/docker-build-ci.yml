@@ -20,7 +20,7 @@ jobs:
         run: |
           pwd
           ls -al
-          cd .github
+          cd .github/workflows
           pwd
           ls -al
           docker build .
