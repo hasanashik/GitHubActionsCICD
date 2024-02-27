@@ -12,11 +12,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - shell: bash
+      - name: Install Make
+        shell: bash
         run: |
           sudo apt-get update
           sudo apt-get install make
-      - shell: bash
+      - name: Build Docker Image
+        shell: bash
         run: |
           cd .github/workflows
           pwd
