@@ -21,6 +21,8 @@ jobs:
         shell: bash
         run: |
           cd .github/workflows
-          pwd
-          ls -al
           make docker_build
+      - name: Docker Login
+        shell: bash
+        run: |
+          make docker_login DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }} DOCKER_PASSWORD=${{ secrets.DOCKER_PASSWORD }}
