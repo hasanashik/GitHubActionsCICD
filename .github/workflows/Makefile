@@ -1,5 +1,5 @@
 IMG_NAME := nginx
-IMG_TAG := 1.0
+IMG_TAG := 1.1
 
 docker_build:
     @ docker build -t ${IMG_NAME}:${IMG_TAG} .
