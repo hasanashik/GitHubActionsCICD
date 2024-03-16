@@ -1,5 +1,5 @@
 name: Learn tf CI
-run-name: ${{ github.actor }} is learning tf CI
+run-name: ${{ github.actor }} is practicing tf CI
 
 on:
   push:
